@@ -728,7 +728,7 @@ Tells the app which token IDs are special control tokens that Whisper needs.
     "transcribe": 50359,   // "I want you to transcribe, not translate"
     "no_timestamps": 50363,// "Don't include timestamps in output"
     "en": 50259,           // "The language is English"
-    "vocab_size": 50258    // Size of the token vocabulary
+    "vocab_size": 50258    // Number of base tokens (full vocab is 51,865 with special tokens)
 }
 ```
 
@@ -1275,7 +1275,7 @@ adb shell am start -n com.example.securevoice/.MainActivity
 
 ```
     ┌──────────────────────────────────────────────────────────┐
-    │                    97 Unit Tests Total                    │
+    │                    98 Unit Tests Total                    │
     │                                                          │
     │  AudioRingBufferTest (11 tests)                          │
     │  ├── Empty buffer behavior                               │
@@ -1324,7 +1324,7 @@ adb shell am start -n com.example.securevoice/.MainActivity
     │  ├── Empty input                                         │
     │  └── Realistic voice transcript                          │
     │                                                          │
-    │  ChatViewModelTest (10 tests)                            │
+    │  ChatViewModelTest (11 tests)                            │
     │  ├── Initial state                                       │
     │  ├── Permission requirement                              │
     │  ├── Recording with permission                           │
@@ -1334,7 +1334,8 @@ adb shell am start -n com.example.securevoice/.MainActivity
     │  ├── Transcription error                                 │
     │  ├── Streaming error with partial content                │
     │  ├── Blank transcript                                    │
-    │  └── Cannot re-start while recording                     │
+    │  ├── Cannot re-start while recording                     │
+    │  └── Start recording failure shows error                 │
     └──────────────────────────────────────────────────────────┘
 ```
 
